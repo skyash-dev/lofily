@@ -11,11 +11,7 @@ function App() {
     },
     { capture: true }
   );
-  return (
-    <div className="container">
-      <img src={kakashi} alt="broken" />
-    </div>
-  );
+  return <div className="container"></div>;
 }
 
 export default App;
