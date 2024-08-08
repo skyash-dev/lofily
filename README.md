@@ -1,4 +1,4 @@
-![og image](https://raw.githubusercontent.com/skyash-dev/lofily/main/src/assets/banner.gif)
+![og image](https://raw.githubusercontent.com/skyash-dev/lofily/main/src/assets/banner.png)
 
 # **lofily**
 
