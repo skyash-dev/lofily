@@ -22,6 +22,8 @@ function App() {
             onClick={() => {
               if (imgIndex > 0) {
                 setImgIndex(imgIndex - 1);
+              } else {
+                setImgIndex(getGifs().length - 1);
               }
             }}
           >
@@ -39,6 +41,8 @@ function App() {
             onClick={() => {
               if (imgIndex < getGifs().length - 1) {
                 setImgIndex(imgIndex + 1);
+              } else {
+                setImgIndex(0);
               }
             }}
           >
