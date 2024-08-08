@@ -16,7 +16,7 @@
 
 ### 🚀 How It Works
 
-1. **Launch **lofily\*\*\*\*: Open the app and let it seamlessly integrate with your desktop.
+1. **Launch** **lofily**: Open the app and let it seamlessly integrate with your desktop.
 2. **Choose Your Vibe**: Select from various lo-fi playlists or let **lofily** surprise you.
 3. **Watch Your Desktop Come Alive**: As music plays, witness your wallpaper transform in sync.
 4. **Set Your Focus Sessions**: Activate the Pomodoro timer for structured work intervals.

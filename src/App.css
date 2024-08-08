@@ -1,9 +1,31 @@
-body {
-  margin: 0;
-  /* background-color: black; */
+:root {
+  --green-glow-drop-shadow: drop-shadow(0px 0px 2px hsl(120, 100%, 80%))
+    drop-shadow(0px 0px 8px yellow);
 }
 
-.container iframe {
-  height: 100vh;
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+.container img {
+  height: 90vh;
   width: 100vw;
+}
+
+.ui {
+  position: absolute;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  filter: var(--green-glow-drop-shadow);
+}
+
+.flex {
+  display: flex;
 }

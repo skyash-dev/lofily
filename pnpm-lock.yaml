@@ -8,6 +8,9 @@ dependencies:
   '@tauri-apps/api':
     specifier: ^1
     version: 1.6.0
+  lucide-react:
+    specifier: ^0.426.0
+    version: 0.426.0(react@18.3.1)
   react:
     specifier: ^18.2.0
     version: 18.3.1
@@ -935,6 +938,14 @@ packages:
     dependencies:
       yallist: 3.1.1
     dev: true
+
+  /lucide-react@0.426.0(react@18.3.1):
+    resolution: {integrity: sha512-aby5G+Zt+LIIEU0n9900XQNJFJUcs7/S+jOEgIhkV08NX3kGx1zxALKh1JvAKcYqutWLg07exbnYvh66szhrRA==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc
+    dependencies:
+      react: 18.3.1
+    dev: false
 
   /ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
