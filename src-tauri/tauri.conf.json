@@ -6,8 +6,8 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "tauri-wallpaper",
-    "version": "0.0.0"
+    "productName": "lofily",
+    "version": "0.0.1"
   },
   "tauri": {
     "allowlist": {
@@ -19,7 +19,7 @@
     },
     "windows": [
       {
-        "title": "tauri-wallpaper",
+        "title": "lofily",
         "closable": false,
         "maximizable": false,
         "minimizable": false,

@@ -17,6 +17,7 @@ body {
 .ui {
   position: absolute;
   z-index: 2;
+  width: 100vw;
 }
 
 button {
@@ -25,10 +26,16 @@ button {
   background-color: transparent;
   cursor: pointer;
   filter: var(--green-glow-drop-shadow);
+  margin: 4px 8px 4px 8px;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex {
   display: flex;
+  justify-content: center;
 }
 
 #crt-lines {
@@ -68,4 +75,8 @@ button {
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+button:hover {
+  transform: scale(1.1);
 }
