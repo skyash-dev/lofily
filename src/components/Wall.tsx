@@ -8,50 +8,52 @@ import {
   Pause,
 } from "lucide-react";
 import noise_sfx from "./../assets/noise_sfx.mp3";
+import YouTube from "react-youtube";
 
 export default function () {
   const [imgIndex, setImgIndex] = useState<any>(0);
   const [gifs, setGifs] = useState<any>(getGifs());
   const [linkIndex, setLinkIndex] = useState<any>(0);
   const [links, setLinks] = useState<any>(getLinks());
-  const [noise, setNoise] = useState<any>(false);
+  const [noise, setNoise] = useState<any>(true);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [player, setPlayer] = useState<any>();
   let randImg = Math.floor(Math.random() * (gifs.length + 1));
   let randLink = Math.floor(Math.random() * (links.length + 1));
+  const opts = {
+    height: "390",
+    width: "640",
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+    },
+  };
 
   function forward() {
     setNoise(true);
-    setTimeout(() => {
-      if (imgIndex < gifs.length - 1 && linkIndex < links.length) {
-        setLinkIndex(linkIndex + 1);
-        setImgIndex(imgIndex + 1);
-      } else {
-        setLinkIndex(0);
-        setImgIndex(0);
-      }
-      setNoise(false);
-    }, 300);
+    if (imgIndex < gifs.length - 1 && linkIndex < links.length) {
+      setLinkIndex(linkIndex + 1);
+      setImgIndex(imgIndex + 1);
+    } else {
+      setLinkIndex(0);
+      setImgIndex(0);
+    }
   }
   function backward() {
     setNoise(true);
-    setTimeout(() => {
-      if (imgIndex > 0) {
-        setLinkIndex(linkIndex - 1);
-        setImgIndex(imgIndex - 1);
-      } else {
-        setImgIndex(gifs.length - 1);
-      }
-      setNoise(false);
-    }, 300);
+    if (imgIndex > 0 && linkIndex > 0) {
+      setLinkIndex(linkIndex - 1);
+      setImgIndex(imgIndex - 1);
+    } else {
+      setLinkIndex(links.length - 1);
+      setImgIndex(gifs.length - 1);
+    }
   }
   function shuffle() {
     setNoise(true);
-    setTimeout(() => {
-      setLinkIndex(randLink);
-      setImgIndex(randImg);
-      randImg = Math.floor(Math.random() * (gifs.length + 1));
-      setNoise(false);
-    }, 300);
+    setLinkIndex(randLink);
+    setImgIndex(randImg);
+    randImg = Math.floor(Math.random() * (gifs.length + 1));
   }
 
   return (
@@ -77,12 +79,14 @@ export default function () {
             <ChevronsRight color="white" size={30}></ChevronsRight>
           </button>
         </div>
-        <iframe
-          src={links[linkIndex]}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-        ></iframe>
+        <YouTube
+          videoId={links[linkIndex]}
+          opts={opts}
+          onReady={(e: any) => {
+            setNoise(false);
+            setPlayer(e.target);
+          }}
+        />
       </div>
       {noise ? (
         <img src={getNoise()} alt="" />

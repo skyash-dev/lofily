@@ -55,19 +55,19 @@ export function getNoise() {
 
 export function getLinks() {
   let links = [
-    "https://www.youtube.com/embed/wkhLHTmS_GI?si=Ox_GmT_PIkMx9AaU?autoplay=0&mute=0&controls=0&origin=https%3A%2F%2Fwww.lofi.cafe&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=true&color=black&enablejsapi=1&widgetid=1",
-    "https://www.youtube.com/embed/5yx6BWlEVcY?si=tqP2mgvp5433_GLL?autoplay=0&mute=0&controls=0&origin=https%3A%2F%2Fwww.lofi.cafe&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=true&color=black&enablejsapi=1&widgetid=1",
-    "https://www.youtube.com/embed/rPjez8z61rI?si=B6DIMnksTyjIBl9r?autoplay=0&mute=0&controls=0&origin=https%3A%2F%2Fwww.lofi.cafe&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=true&color=black&enablejsapi=1&widgetid=1",
-    "https://www.youtube.com/embed/rZCO-sAtP0I?si=HimrfgJnWmcVBXbt?autoplay=0&mute=0&controls=0&origin=https%3A%2F%2Fwww.lofi.cafe&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=true&color=black&enablejsapi=1&widgetid=1",
-    "https://www.youtube.com/embed/TfmECBzmOn4?si=m_IFmQMahf98O9QA?autoplay=0&mute=0&controls=0&origin=https%3A%2F%2Fwww.lofi.cafe&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=true&color=black&enablejsapi=1&widgetid=1",
-    "https://www.youtube.com/embed/A_hmrykwR7g?si=8gT54-Zokvj5pw0k?autoplay=0&mute=0&controls=0&origin=https%3A%2F%2Fwww.lofi.cafe&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=true&color=black&enablejsapi=1&widgetid=1",
-    "https://www.youtube.com/embed/8Yqx3we3WJ4?si=doom7xT9AABLwPq_?autoplay=0&mute=0&controls=0&origin=https%3A%2F%2Fwww.lofi.cafe&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=true&color=black&enablejsapi=1&widgetid=1",
-    "https://www.youtube.com/embed/7NOSDKb0HlU?si=7L8_Pk2bNx3hWccs?autoplay=0&mute=0&controls=0&origin=https%3A%2F%2Fwww.lofi.cafe&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=true&color=black&enablejsapi=1&widgetid=1",
-    "https://www.youtube.com/embed/C_9FdFnE5hY?si=s-7O_t0kgCMmwrd9?autoplay=0&mute=0&controls=0&origin=https%3A%2F%2Fwww.lofi.cafe&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=true&color=black&enablejsapi=1&widgetid=1",
-    "https://www.youtube.com/embed/wJSg1H8wOUg?si=W_WNkYta99X2yxBP?autoplay=0&mute=0&controls=0&origin=https%3A%2F%2Fwww.lofi.cafe&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=true&color=black&enablejsapi=1&widgetid=1",
-    "https://www.youtube.com/embed/qH3fETPsqXU?si=QomLWangWk1wpEUi?autoplay=0&mute=0&controls=0&origin=https%3A%2F%2Fwww.lofi.cafe&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=true&color=black&enablejsapi=1&widgetid=1",
-    "https://www.youtube.com/embed/tNkZsRW7h2c?si=cbWNjmvaDPuzz-11?autoplay=0&mute=0&controls=0&origin=https%3A%2F%2Fwww.lofi.cafe&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=true&color=black&enablejsapi=1&widgetid=1",
-    "https://www.youtube.com/embed/lP26UCnoH9s?si=9lxEp2NukIl3tgzI?autoplay=0&mute=0&controls=0&origin=https%3A%2F%2Fwww.lofi.cafe&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=true&color=black&enablejsapi=1&widgetid=1",
+    "wkhLHTmS_GI",
+    "5yx6BWlEVcY",
+    "rPjez8z61rI",
+    "rZCO-sAtP0I",
+    "TfmECBzmOn4",
+    "A_hmrykwR7g",
+    "8Yqx3we3WJ4",
+    "7NOSDKb0HlU",
+    "C_9FdFnE5hY",
+    "wJSg1H8wOUg",
+    "qH3fETPsqXU",
+    "tNkZsRW7h2c",
+    "lP26UCnoH9s",
   ];
 
   return links;
