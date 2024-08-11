@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import noise_sfx from "./../assets/noise_sfx.mp3";
 import YouTube from "react-youtube";
+import { Slider } from "@/components/ui/slider";
 
 export default function () {
   const [imgIndex, setImgIndex] = useState<any>(0);
@@ -16,7 +17,7 @@ export default function () {
   const [linkIndex, setLinkIndex] = useState<any>(0);
   const [links, setLinks] = useState<any>(getLinks());
   const [noise, setNoise] = useState<any>(true);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const [player, setPlayer] = useState<any>();
   let randImg = Math.floor(Math.random() * (gifs.length + 1));
   let randLink = Math.floor(Math.random() * (links.length + 1));
@@ -60,24 +61,37 @@ export default function () {
     <div className="container">
       <div className="ui">
         <div className="flex">
-          <button onClick={backward}>
-            <ChevronsLeft color="white" size={30}></ChevronsLeft>
-          </button>
-          {isPlaying ? (
-            <button onClick={() => setIsPlaying(false)}>
-              <Pause color="white" size={22}></Pause>
+          <div>
+            <button onClick={backward}>
+              <ChevronsLeft color="white" size={30}></ChevronsLeft>
             </button>
-          ) : (
-            <button onClick={() => setIsPlaying(true)}>
-              <Play color="white" size={22}></Play>
+            {isPlaying ? (
+              <button
+                onClick={() => {
+                  setIsPlaying(false);
+                  player.pauseVideo();
+                }}
+              >
+                <Pause color="white" size={22}></Pause>
+              </button>
+            ) : (
+              <button
+                onClick={() => {
+                  setIsPlaying(true);
+                  player.playVideo();
+                }}
+              >
+                <Play color="white" size={22}></Play>
+              </button>
+            )}
+            <button onClick={shuffle}>
+              <ShuffleIcon color="white" size={20}></ShuffleIcon>
             </button>
-          )}
-          <button onClick={shuffle}>
-            <ShuffleIcon color="white" size={20}></ShuffleIcon>
-          </button>
-          <button onClick={forward}>
-            <ChevronsRight color="white" size={30}></ChevronsRight>
-          </button>
+            <button onClick={forward}>
+              <ChevronsRight color="white" size={30}></ChevronsRight>
+            </button>
+          </div>
+          <Slider defaultValue={[33]} max={100} step={1} />
         </div>
         <YouTube
           videoId={links[linkIndex]}
