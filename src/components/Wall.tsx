@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import noise_sfx from "./../assets/noise_sfx.mp3";
 import YouTube from "react-youtube";
-import { Slider } from "@/components/ui/slider";
+import { Slider } from "./ui/slider";
 
 export default function () {
   const [imgIndex, setImgIndex] = useState<any>(0);
@@ -61,7 +61,7 @@ export default function () {
     <div className="container">
       <div className="ui">
         <div className="flex">
-          <div>
+          <div className="btn-group">
             <button onClick={backward}>
               <ChevronsLeft color="white" size={30}></ChevronsLeft>
             </button>
@@ -91,7 +91,7 @@ export default function () {
               <ChevronsRight color="white" size={30}></ChevronsRight>
             </button>
           </div>
-          <Slider defaultValue={[33]} max={100} step={1} />
+          <Slider defaultValue={[33]} max={100} step={1} className="" />
         </div>
         <YouTube
           videoId={links[linkIndex]}
