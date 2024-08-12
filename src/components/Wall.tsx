@@ -67,8 +67,6 @@ export default function () {
             </button>
             <button
               onClick={() => {
-                console.log(player);
-
                 if (isPlaying) {
                   player.pauseVideo();
                   setIsPlaying(false);
@@ -96,7 +94,9 @@ export default function () {
             max={100}
             step={1}
             className="w-48"
-            color="#FFF"
+            onValueChange={(e) => {
+              player.setVolume(e);
+            }}
           />
           {player ? (
             <span className="highlight font-thin w-64 text-sm">
