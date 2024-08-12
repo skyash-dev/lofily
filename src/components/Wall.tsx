@@ -22,8 +22,8 @@ export default function () {
   let randImg = Math.floor(Math.random() * (gifs.length + 1));
   let randLink = Math.floor(Math.random() * (links.length + 1));
   const opts = {
-    height: "390",
-    width: "640",
+    height: "0",
+    width: "0",
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
@@ -58,32 +58,32 @@ export default function () {
   }
 
   return (
-    <div className="container">
-      <div className="ui">
-        <div className="flex">
-          <div className="btn-group">
+    <div className="">
+      <div className="absolute z-10 w-screen">
+        <div className="flex items-start flex-col ml-4 mt-4 opacity-50 hover:opacity-80 transition-opacity">
+          <div className="flex w-48 justify-between">
             <button onClick={backward}>
               <ChevronsLeft color="white" size={30}></ChevronsLeft>
             </button>
-            {isPlaying ? (
-              <button
-                onClick={() => {
-                  setIsPlaying(false);
+            <button
+              onClick={() => {
+                console.log(player);
+
+                if (isPlaying) {
                   player.pauseVideo();
-                }}
-              >
-                <Pause color="white" size={22}></Pause>
-              </button>
-            ) : (
-              <button
-                onClick={() => {
-                  setIsPlaying(true);
+                  setIsPlaying(false);
+                } else {
                   player.playVideo();
-                }}
-              >
+                  setIsPlaying(true);
+                }
+              }}
+            >
+              {isPlaying ? (
+                <Pause color="white" size={22}></Pause>
+              ) : (
                 <Play color="white" size={22}></Play>
-              </button>
-            )}
+              )}
+            </button>
             <button onClick={shuffle}>
               <ShuffleIcon color="white" size={20}></ShuffleIcon>
             </button>
@@ -91,7 +91,18 @@ export default function () {
               <ChevronsRight color="white" size={30}></ChevronsRight>
             </button>
           </div>
-          <Slider defaultValue={[33]} max={100} step={1} className="" />
+          <Slider
+            defaultValue={[33]}
+            max={100}
+            step={1}
+            className="w-48"
+            color="#FFF"
+          />
+          {player ? (
+            <span className="highlight font-thin w-64 text-sm">
+              {player.videoTitle}
+            </span>
+          ) : null}
         </div>
         <YouTube
           videoId={links[linkIndex]}

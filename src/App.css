@@ -13,34 +13,23 @@ body {
   color: white;
 }
 
-.container img {
+img {
   height: 90vh;
   width: 100vw;
 }
 
-.ui {
-  position: absolute;
-  z-index: 2;
-  width: 100vw;
-}
-
-button {
+button,
+.highlight {
   border: none;
   outline: none;
   background-color: transparent;
   cursor: pointer;
   filter: var(--green-glow-drop-shadow);
-  margin: 4px 8px 4px 8px;
+  /* margin: 4px 8px 4px 8px; */
   padding: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.flex {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 
 #crt-lines {
@@ -84,8 +73,4 @@ button {
 
 button:hover {
   transform: scale(1.1);
-}
-
-.btn-group {
-  display: flex;
 }
