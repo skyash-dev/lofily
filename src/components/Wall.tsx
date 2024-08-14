@@ -5,8 +5,10 @@ import Player from "./Player";
 import noise_sfx from "./../assets/noise_sfx.mp3";
 
 export default function () {
-  const [imgIndex, setImgIndex] = useState<any>(0);
   const [gifs, setGifs] = useState<any>(getGifs());
+  const [imgIndex, setImgIndex] = useState<any>(
+    Math.floor(Math.random() * (gifs.length + 1))
+  );
   const [noise, setNoise] = useState<any>(true);
 
   return (

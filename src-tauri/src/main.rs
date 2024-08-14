@@ -2,18 +2,9 @@
 
 use tauri::Manager;
 
-use tauri_plugin_wallpaper::Wallpaper;
-
-#[tauri::command]
-fn detach(window: tauri::Window){
-  Wallpaper::detach(&window);
-}
-
 
 fn main() {
-  tauri::Builder::default().plugin(
-    Wallpaper::init(),
-  ).setup(|app| {
+  tauri::Builder::default().setup(|app| {
     let window = app.get_window("main").unwrap();
 
     window.show().unwrap();
@@ -38,15 +29,11 @@ fn main() {
 
     window.set_decorations(false).unwrap();
 
-    // Wallpaper::attach(&window);
-
     window.show().unwrap();
     window.set_skip_taskbar(true).unwrap();
 
     return Ok(());
-  }).invoke_handler(tauri::generate_handler![
-    detach
-  ]).run(
+  }).run(
     tauri::generate_context!()
   ).expect(
     "error while running tauri application"

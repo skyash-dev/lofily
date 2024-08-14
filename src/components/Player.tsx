@@ -9,15 +9,19 @@ import YouTube from "react-youtube";
 import { Slider } from "./ui/slider";
 import { getLinks } from "./../utils/constants";
 import { useState } from "react";
+import { useAptabase } from "@aptabase/react";
 
 export default function ({ imgIndex, setImgIndex, gifs, setNoise }: any) {
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [player, setPlayer] = useState<any>();
-  const [linkIndex, setLinkIndex] = useState<any>(0);
+  const { trackEvent } = useAptabase();
+
   const [links, setLinks] = useState<any>(getLinks());
 
   let randImg = Math.floor(Math.random() * (gifs.length + 1));
   let randLink = Math.floor(Math.random() * (links.length + 1));
+
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [player, setPlayer] = useState<any>();
+  const [linkIndex, setLinkIndex] = useState<any>(randLink);
 
   const opts = {
     height: "0",
@@ -29,6 +33,7 @@ export default function ({ imgIndex, setImgIndex, gifs, setNoise }: any) {
   };
 
   function forward() {
+    trackEvent("forward");
     setNoise(true);
     if (imgIndex < gifs.length - 1 && linkIndex < links.length) {
       setLinkIndex(linkIndex + 1);
@@ -39,6 +44,7 @@ export default function ({ imgIndex, setImgIndex, gifs, setNoise }: any) {
     }
   }
   function backward() {
+    trackEvent("backward");
     setNoise(true);
     if (imgIndex > 0 && linkIndex > 0) {
       setLinkIndex(linkIndex - 1);
@@ -49,6 +55,7 @@ export default function ({ imgIndex, setImgIndex, gifs, setNoise }: any) {
     }
   }
   function shuffle() {
+    trackEvent("shuffle");
     setNoise(true);
     setLinkIndex(randLink);
     setImgIndex(randImg);
