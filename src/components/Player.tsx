@@ -14,7 +14,7 @@ import { useAptabase } from "@aptabase/react";
 export default function ({ imgIndex, setImgIndex, gifs, setNoise }: any) {
   const { trackEvent } = useAptabase();
 
-  const [links, setLinks] = useState<any>(getLinks());
+  const links = getLinks();
 
   let randImg = Math.floor(Math.random() * (gifs.length + 1));
   let randLink = Math.floor(Math.random() * (links.length + 1));

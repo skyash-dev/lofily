@@ -1,4 +1,3 @@
-import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
 import Wall from "./components/Wall";
 
