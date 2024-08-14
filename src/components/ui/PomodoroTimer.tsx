@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import bell_sfx from "./../../assets/bell_sfx.wav"; // Adjust the path as needed
 
 function PomodoroTimer() {
   const [minutes, setMinutes] = useState(25);
   const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);
+  const [mode, setMode] = useState("work"); // 'work' or 'break'
+  const audioRef = useRef(new Audio(bell_sfx));
 
   useEffect(() => {
     let interval: any = null;
@@ -16,21 +19,27 @@ function PomodoroTimer() {
           setSeconds(59);
         } else {
           clearInterval(interval);
-          setIsActive(false);
-          alert("Pomodoro session completed!");
+          audioRef.current.play();
+          if (mode === "work") {
+            setMode("break");
+            setMinutes(5);
+          } else {
+            setMode("work");
+            setMinutes(25);
+          }
         }
       }, 1000);
     } else {
-      setIsActive(false);
-      setMinutes(25);
-      setSeconds(0);
       clearInterval(interval);
     }
     return () => clearInterval(interval);
-  }, [isActive, minutes, seconds]);
+  }, [isActive, minutes, seconds, mode]);
 
   const toggleTimer = () => {
     setIsActive(!isActive);
+    setMode("work");
+    setMinutes(25);
+    setSeconds(0);
   };
 
   return (

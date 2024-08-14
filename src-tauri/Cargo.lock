@@ -1424,6 +1424,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "lofily"
+version = "0.0.1"
+dependencies = [
+ "serde",
+ "serde_json",
+ "tauri",
+ "tauri-build",
+]
+
+[[package]]
 name = "log"
 version = "0.4.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2703,18 +2713,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "tauri-plugin-wallpaper"
-version = "0.0.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ee03b8432a8269b1a8f09e6d1d5f0d6c5af9f5f6d13dd309aceb7c1a6c885e23"
-dependencies = [
- "serde",
- "serde_json",
- "tauri",
- "windows 0.39.0",
-]
-
-[[package]]
 name = "tauri-runtime"
 version = "0.14.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2783,17 +2781,6 @@ dependencies = [
  "url",
  "walkdir",
  "windows-version",
-]
-
-[[package]]
-name = "tauri-wallpaper"
-version = "0.0.0"
-dependencies = [
- "serde",
- "serde_json",
- "tauri",
- "tauri-build",
- "tauri-plugin-wallpaper",
 ]
 
 [[package]]
