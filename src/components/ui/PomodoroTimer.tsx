@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import bell_sfx from "./../../assets/bell_sfx.wav"; // Adjust the path as needed
 import { useAptabase } from "@aptabase/react";
+import skyash from "../../../public/skyash.jpeg";
 
 function PomodoroTimer() {
   const { trackEvent } = useAptabase();
@@ -52,11 +53,21 @@ function PomodoroTimer() {
   };
 
   return (
-    <div className="absolute bottom-0 right-0 flex items-start flex-col opacity-50 hover:opacity-80 transition-opacity">
-      <div className="w-48 flex justify-center mr-4 mb-4">
-        <button className="text-xl" onClick={toggleTimer}>
+    <div className="absolute bottom-0 right-0 flex items-start flex-col">
+      <div className="w-48 flex flex-col items-center justify-center mr-4 mb-4 ">
+        <button
+          className="text-xl opacity-50 hover:opacity-80 transition-all"
+          onClick={toggleTimer}
+        >
           {String(minutes).padStart(2, "0")}:{String(seconds).padStart(2, "0")}
         </button>
+        <a href="https://x.com/_skyash/" target="_blank">
+          <img
+            src={skyash}
+            className="w-8 h-8 rounded-full opacity-50 hover:opacity-80 my-2"
+            alt=""
+          />
+        </a>
       </div>
     </div>
   );
