@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import bell_sfx from "./../../assets/bell_sfx.wav"; // Adjust the path as needed
 import { useAptabase } from "@aptabase/react";
-import skyash from "../../../public/skyash.jpeg";
+import skyash from "/skyash.jpeg";
 
 function PomodoroTimer() {
   const { trackEvent } = useAptabase();
@@ -40,12 +40,7 @@ function PomodoroTimer() {
   }, [isActive, minutes, seconds, mode]);
 
   const toggleTimer = () => {
-    trackEvent(
-      `toggleTimer: ${String(minutes).padStart(
-        2,
-        "0"
-      )}:{String(seconds).padStart(2, "0")}`
-    );
+    trackEvent(`toggleTimer: ${minutes}:${seconds}`);
     setIsActive(!isActive);
     setMode("work");
     setMinutes(25);
