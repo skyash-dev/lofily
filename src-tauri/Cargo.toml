@@ -1,7 +1,7 @@
 [package]
 name = "lofily"
 version = "0.0.1"
-description = "vibe with lofily to work, study, and relax."
+description = "lofily"
 authors = ["you"]
 edition = "2021"
 

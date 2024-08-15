@@ -61,13 +61,15 @@ function PomodoroTimer() {
         >
           {String(minutes).padStart(2, "0")}:{String(seconds).padStart(2, "0")}
         </button>
-        <a href="https://x.com/_skyash/" target="_blank">
-          <img
-            src={skyash}
-            className="w-8 h-8 rounded-full opacity-50 hover:opacity-80 my-2"
-            alt=""
-          />
-        </a>
+        {mode == "break" ? (
+          <a href="https://x.com/_skyash/" target="_blank">
+            <img
+              src={skyash}
+              className="w-8 h-8 rounded-full opacity-50 hover:opacity-80 my-2"
+              alt=""
+            />
+          </a>
+        ) : null}
       </div>
     </div>
   );
