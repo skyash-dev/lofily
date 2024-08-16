@@ -1,52 +1,37 @@
-import img1 from "./../assets/gifs/1.gif";
-import img2 from "./../assets/gifs/2.gif";
-import img3 from "./../assets/gifs/3.gif";
-import img4 from "./../assets/gifs/4.gif";
-import img5 from "./../assets/gifs/5.gif";
-import img6 from "./../assets/gifs/6.gif";
-import img7 from "./../assets/gifs/7.gif";
-import img8 from "./../assets/gifs/8.gif";
-import img9 from "./../assets/gifs/9.gif";
-import img10 from "./../assets/gifs/10.gif";
-import img11 from "./../assets/gifs/11.gif";
-import img12 from "./../assets/gifs/12.gif";
-import img13 from "./../assets/gifs/13.gif";
-import img14 from "./../assets/gifs/14.gif";
-import img15 from "./../assets/gifs/15.gif";
-import img16 from "./../assets/gifs/16.gif";
-
-import noise1 from "./../assets/noise1.gif";
-import noise2 from "./../assets/noise2.gif";
-import noise3 from "./../assets/noise3.gif";
-import noise4 from "./../assets/noise4.gif";
-import noise5 from "./../assets/noise5.gif";
-import noise6 from "./../assets/noise6.gif";
-import noise7 from "./../assets/noise7.gif";
-import noise8 from "./../assets/noise8.gif";
-
 export function getGifs() {
   let gifs = [
-    img1,
-    img2,
-    img3,
-    img4,
-    img5,
-    img6,
-    img7,
-    img8,
-    img9,
-    img10,
-    img11,
-    img12,
-    img13,
-    img14,
-    img15,
-    img16,
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723826880/lofily/gifs/of8zer2ifrlujsmvsrr4.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723826880/lofily/gifs/giyqr8wllbneremzqcvk.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723826880/lofily/gifs/tdg3kyqxhjvh2dfkmqgk.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723826880/lofily/gifs/dcmdctlvozgylxdidkgd.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723826880/lofily/gifs/j1hcwqjh8fra5yy2cdok.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723826880/lofily/gifs/fnzn9h1lc5lpbobqqzar.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723826880/lofily/gifs/fnzn9h1lc5lpbobqqzar.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723826880/lofily/gifs/t3tntso0nujoy8pwplnx.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723826880/lofily/gifs/kkloozpjegwnlgxebfiw.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723826880/lofily/gifs/pjjbwrduze32ubeyiqhc.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723826880/lofily/gifs/tp6tnakhw50ix2agdy7o.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723826880/lofily/gifs/yiszh1ikd9vylgztsb24.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723826880/lofily/gifs/bvnawjc9qnpmaxviblos.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723826880/lofily/gifs/fliuis4dzv5fv5x4rpmj.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723826880/lofily/gifs/t1u2y41osd2op5xln600.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723826880/lofily/gifs/c6xxabhxiqlvmhivgayx.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723826880/lofily/gifs/r0t6oxf0hqps0dnta53x.gif",
+    "",
   ];
   return gifs;
 }
 export function getNoise() {
-  let noises = [noise1, noise2, noise3, noise4, noise5, noise6, noise7, noise8];
+  let noises = [
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723825247/lofily/noise/vq599zn68fuj9ajigyht.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723825247/lofily/noise/vfkknhw8vwr7aubewyl7.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723825247/lofily/noise/zgac3zi2noulhgwj2arl.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723825247/lofily/noise/iinljwe7wobyrh3n2cgr.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723825247/lofily/noise/yrm4zaekbymd1nw5r5tb.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723825247/lofily/noise/trlodwubdqldk9yazf8d.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723825247/lofily/noise/oskhnalmidbalev8iyuf.gif",
+    "https://res.cloudinary.com/dikqqb48o/image/upload/v1723825247/lofily/noise/urv1owd0rvplzj534nm0.gif",
+  ];
   let rand = Math.floor(Math.random() * noises.length);
   let noise = noises[rand];
 

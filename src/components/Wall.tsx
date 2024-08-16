@@ -2,7 +2,7 @@ import { useState } from "react";
 import { getGifs, getNoise } from "../utils/constants";
 import PomodoroTimer from "./ui/PomodoroTimer";
 import Player from "./Player";
-import noise_sfx from "./../assets/noise_sfx.mp3";
+import noise_sfx from "./../assets/sfx/noise_sfx.mp3";
 
 export default function () {
   const gifs = getGifs();

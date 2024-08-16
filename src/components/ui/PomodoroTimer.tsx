@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import bell_sfx from "./../../assets/bell_sfx.wav"; // Adjust the path as needed
+import bell_sfx from "./../../assets/sfx/bell_sfx.wav"; // Adjust the path as needed
 import { useAptabase } from "@aptabase/react";
 import skyash from "/skyash.jpeg";
 
