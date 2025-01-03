@@ -1,7 +1,8 @@
 ![og image](https://raw.githubusercontent.com/skyash-dev/lofily/main/src/assets/banner.png)
 
 # **lofily**
-![Uploading Screenshot 2025-01-03 114536.png…]()
+
+![screenshot](https://github.com/user-attachments/assets/34c29e37-68cd-46e5-91e2-a02dba261900)
 
 
 ## Enjoy Your Productivity Sessions with Lo-Fi Vibes
